@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/link/:user/:repo', function(req, res) {
   console.log(req.params.user, req.params.repo);
+  exec("wget https://github.com/" + req.params.user + "/" + req.params.repo + "/archive/master.zip");
+  exec("unzip master.zip")
   res.send(200);
-  if (exec("echo hello") !== 0) {
-    exit(1);
-  }
+
 });
 
 module.exports = router;
