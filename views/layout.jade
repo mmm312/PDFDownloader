@@ -1,0 +1,11 @@
+doctype html
+html(ng-app='PDFDownloader')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js')
+    script(src='/javascripts/scripts.js')
+
+  body(ng-controller="PDFDownloaderCtrl")
+    block content

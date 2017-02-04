@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1= title
+  p Welcome to #{title}
+  p#para
+  form#frm1
+  | Git repository:
+  input#user_entry(type='text')
+  br
+  br
+  br
+  input(type='button', ng-click='myFunction()', value='Submit')
